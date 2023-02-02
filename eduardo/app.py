@@ -10,33 +10,25 @@ app = Dash(
 
 ################# BEGINNING #################
 
-sidebar = html.Div(
-  [
-    html.H1("Procenge Dashboard", className="display-6"),
-    html.Hr(),
-    html.P(
-      "A simple sidebar layout with navigation links", className="lead"
-    ),
-    dbc.Nav(
-      [
-        dbc.NavLink(page['name'], href=page['path'], active="exact")
-        for page in page_registry.values()
-      ],
-      vertical=True,
-      pills=True,
-    ),
+sidebar = html.Div([
+  html.H1("Procenge Dashboard", className="display-6"),
+  html.Hr(),
+  html.P("Páginas:", className="lead"),
+  dbc.Nav([
+    dbc.NavLink(page['name'], href=page['path'], active="exact")
+    for page in page_registry.values()
   ],
-  className='sidebar',
-)
+    vertical=True,
+    pills=True,
+  ),
+], className='position-relative')
 
 app.layout = html.Div(
   dbc.Row([
-    dbc.Col(sidebar, width='auto'),
+    dbc.Col(sidebar, className='sidebar', width='auto'),
     dbc.Col(page_container, className='content'),
-  ]),
-  className='app-layout',
+  ], class_name='g-0')
 )
-
 
 
 if __name__ == '__main__':

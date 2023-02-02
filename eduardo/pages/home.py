@@ -14,5 +14,5 @@ register_page(__name__, path=PAGE['path'], name=PAGE['name'])
 ################# BEGINNING #################
 
 layout = html.Div([
-  html.H2(PAGE['name'])
+  html.H2(PAGE['name']),
 ])
