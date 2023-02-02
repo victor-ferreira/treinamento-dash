@@ -1,0 +1,14 @@
+.sidebar {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20vw;
+  height: 100vh;
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.content {
+  padding: 2rem 1rem;
+}
